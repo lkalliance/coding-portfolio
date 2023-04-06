@@ -1,0 +1,140 @@
+:root {
+    --main: black;
+    --primary: rgb(9, 14, 63);
+    --secondary: rgb(48, 224, 218);
+    --tertiary: rgb(55, 55, 150);
+    --link: rgb(248, 218, 99);
+    --secondary-link: rgb(148, 173, 250);
+}
+
+html {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex-grow: 1;
+    position: relative;
+    margin: 0;
+    padding-bottom: 100px;
+}
+
+/* font-family: 'Coda', cursive;
+font-family: 'Comfortaa', cursive;
+font-family: 'Epilogue', sans-serif;
+font-family: 'Gruppo', cursive;
+font-family: 'Oxanium', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Share', cursive; */
+
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 15px;
+}
+
+header h1 {
+    font-size: 1.8em;
+    line-height: 1.1em;
+    font-family: 'Gruppo', sans-serif;
+    margin-bottom: 0;
+}
+
+header h1 span {
+    white-space: nowrap;
+}
+
+header a {
+    color: var(--link);
+    text-decoration: none;
+    margin-left: 12px;
+    font-size: .8em;
+    line-height: 1.4em;
+    font-family: 'Coda', sans-serif;
+}
+
+header a:hover {
+    color: var(--secondary-link);
+}
+
+div#site-header {
+    position: relative;
+}
+
+nav {
+    padding: 0;
+}
+
+nav ul {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: end;
+}
+
+header button {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    /* padding: .25rem .75rem; */
+    color: rgba (255, 255, 255, .5);
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 4px;
+}
+
+header button span {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    vertical-align: middle;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--secondary);
+    letter-spacing: .2rem;
+
+    /* font-family: 'Comfortaa', cursive; */
+    font-family: 'Gruppo', cursive;
+    /* font-family: 'Quicksand', sans-serif; */
+
+    font-size: 1em;
+    line-height: 1.2em;
+    font-weight: 500;
+}
+
+main {
+    padding: 15px;
+}
+
+main h2 {
+    font-family: 'Coda', sans-serif;
+    font-size: 1.3em;
+    font-weight: 800;
+}
+
+
+/* For login and project forms */
+
+label {
+    display: block;
+    margin-top: 20px;
+}
+
+input {
+    width: 300px;
+}
+
+textarea {
+    width: 300px;
+    height: 300px;
+}
