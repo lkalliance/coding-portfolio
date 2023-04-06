@@ -48,7 +48,6 @@ header h1 span {
 header a {
     color: var(--link);
     text-decoration: none;
-    margin-left: 12px;
     font-size: .8em;
     line-height: 1.4em;
     font-family: 'Coda', sans-serif;
@@ -60,6 +59,7 @@ header a:hover {
 
 div#site-header {
     position: relative;
+    padding-right: 55px;
 }
 
 nav {
@@ -69,7 +69,7 @@ nav {
 nav ul {
     margin-bottom: 0;
     display: flex;
-    justify-content: end;
+    /* justify-content: end; */
 }
 
 header button {
