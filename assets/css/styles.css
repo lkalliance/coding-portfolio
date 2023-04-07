@@ -4,6 +4,7 @@
     --secondary: rgb(48, 224, 218);
     --tertiary: rgb(55, 55, 150);
     --link: rgb(248, 218, 99);
+    --link-dark: rgb(185, 150, 14);
     --secondary-link: rgb(148, 173, 250);
 }
 
@@ -28,6 +29,16 @@ font-family: 'Oxanium', cursive;
 font-family: 'Quicksand', sans-serif;
 font-family: 'Share', cursive; */
 
+a {
+    font-family: 'Coda', sans-serif;
+    text-decoration: none;
+    color: var(--link-dark);
+}
+
+a:hover {
+    color: var(--secondary-link);
+}
+
 header {
     background-color: var(--primary);
     color: white;
@@ -47,10 +58,8 @@ header h1 span {
 
 header a {
     color: var(--link);
-    text-decoration: none;
     font-size: .8em;
     line-height: 1.4em;
-    font-family: 'Coda', sans-serif;
 }
 
 header a:hover {
@@ -116,12 +125,47 @@ main {
     padding: 15px;
 }
 
-main h2 {
-    font-family: 'Coda', sans-serif;
-    font-size: 1.3em;
-    font-weight: 800;
+main div.accordion-item {
+    padding: 10px;
+    border: 1px solid var(--tertiary);
 }
 
+main a {
+    margin-right: 12px;
+}
+
+main h2 {
+    margin-bottom: 0;
+    font-size: .9em;
+}
+
+main .accordion-button {
+    padding: 0;
+    font-size: .9em;
+    display: block;
+    padding-top: 8px;
+}
+
+main .accordion-button::after {
+    position: absolute;
+    right: 0;
+    top: -21px;
+}
+
+main .accordion-button.collapsed,
+main .accordion-button:not(.collapsed) {
+    background-color: white;
+    border-bottom-color: white;
+    box-shadow: none;
+    color: black;
+}
+
+main a.title {
+    color: var(--primary);
+    font-family: 'Coda', sans-serif;
+    font-weight: 800;
+    font-size: 1.2em;
+}
 
 /* For login and project forms */
 
