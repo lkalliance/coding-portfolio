@@ -2,8 +2,9 @@
     --main: black;
     --primary: rgb(9, 14, 63);
     --secondary: rgb(48, 224, 218);
-    --tertiary: rgb(55, 55, 150);
+    --tertiary: rgb(91, 91, 231);
     --link: rgb(248, 218, 99);
+    --link-dark: rgb(201, 188, 0);
     --secondary-link: rgb(148, 173, 250);
 }
 
@@ -18,6 +19,7 @@ body {
     position: relative;
     margin: 0;
     padding-bottom: 100px;
+    font-family: 'Oxanium', sans-serif;
 }
 
 /* font-family: 'Coda', cursive;
@@ -28,10 +30,21 @@ font-family: 'Oxanium', cursive;
 font-family: 'Quicksand', sans-serif;
 font-family: 'Share', cursive; */
 
+a {
+    font-family: 'Coda', sans-serif;
+    color: var(--link-dark);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-link);
+}
+
 header {
     background-color: var(--primary);
     color: white;
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 header h1 {
@@ -50,7 +63,6 @@ header a {
     text-decoration: none;
     font-size: .8em;
     line-height: 1.4em;
-    font-family: 'Coda', sans-serif;
 }
 
 header a:hover {
@@ -68,9 +80,6 @@ nav .container-fluid {
 }
 
 nav ul.navbar-nav {
-    margin: -5px 0 0;
-    position: relative;
-    top: 5px;
     flex-direction: row;
 }
 
@@ -118,10 +127,58 @@ main {
     padding: 15px;
 }
 
+main .accordion-item {
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    padding: 10px;
+}
+
 main h2 {
     font-family: 'Coda', sans-serif;
-    font-size: 1.3em;
-    font-weight: 800;
+    font-size: 1.1em;
+}
+
+main h2 strong,
+main h2 span {
+    color: var(--tertiary);
+    margin-right: 6px;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: inline;
+}
+
+main h2 strong {
+    font-weight: bold;
+}
+
+main h2 .accordion-button {
+    margin-top: 6px;
+}
+
+main h2 .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+main .accordion-body {
+    padding: 0;
+}
+
+main h2 .accordion-button {
+    display: block;
+    padding: 0 25px 0 0;
+}
+
+main h2 .accordion-button::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+main h2 a.title {
+    color: var(--primary);
+    margin-right: 12px;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 
