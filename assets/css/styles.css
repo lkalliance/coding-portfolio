@@ -19,21 +19,18 @@ body {
     position: relative;
     margin: 0;
     padding-bottom: 100px;
-    font-family: 'Oxanium', sans-serif;
+    font-family: 'Anuphan', sans-serif;
+    font-size: .8em;
 }
-
-/* font-family: 'Coda', cursive;
-font-family: 'Comfortaa', cursive;
-font-family: 'Epilogue', sans-serif;
-font-family: 'Gruppo', cursive;
-font-family: 'Oxanium', cursive;
-font-family: 'Quicksand', sans-serif;
-font-family: 'Share', cursive; */
 
 a {
     font-family: 'Coda', sans-serif;
     color: var(--link-dark);
     text-decoration: none;
+}
+
+p {
+    font-size: 1em;
 }
 
 a:hover {
@@ -104,6 +101,14 @@ header button.navbar-toggler span {
     background-repeat: no-repeat;
 }
 
+#about {
+    text-align: right;
+}
+
+#about img {
+    width: 100px;
+}
+
 footer {
     position: absolute;
     bottom: 0;
@@ -113,11 +118,7 @@ footer {
     background-color: var(--primary);
     color: var(--secondary);
     letter-spacing: .2rem;
-
-    /* font-family: 'Comfortaa', cursive; */
     font-family: 'Gruppo', cursive;
-    /* font-family: 'Quicksand', sans-serif; */
-
     font-size: 1em;
     line-height: 1.2em;
     font-weight: 500;
@@ -133,17 +134,28 @@ main .accordion-item {
     padding: 10px;
 }
 
-main h2 {
+main h2, h3 {
     font-family: 'Coda', sans-serif;
-    font-size: 1.1em;
+}
+
+main h2 {
+    font-size: 1em;
+    margin: 0;
+}
+
+main h3 {
+    font-size: 1em;
+    font-weight: 300;
+    margin: 8px 0;
 }
 
 main h2 strong,
 main h2 span {
     color: var(--tertiary);
     margin-right: 6px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Anuphan', sans-serif;
     display: inline;
+    font-size: .8em;
 }
 
 main h2 strong {
@@ -160,7 +172,10 @@ main h2 .accordion-button:not(.collapsed) {
 }
 
 main .accordion-body {
+    font-family: 'Anuphan', sans-serif;
     padding: 0;
+    font-size: .8em;
+    margin-top: 12px;
 }
 
 main h2 .accordion-button {
@@ -177,7 +192,7 @@ main h2 .accordion-button::after {
 main h2 a.title {
     color: var(--primary);
     margin-right: 12px;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1.2em;
 }
 
