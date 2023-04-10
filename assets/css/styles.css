@@ -2,8 +2,9 @@
     --main: black;
     --primary: rgb(9, 14, 63);
     --secondary: rgb(48, 224, 218);
-    --tertiary: rgb(55, 55, 150);
+    --tertiary: rgb(91, 91, 231);
     --link: rgb(248, 218, 99);
+    --link-dark: rgb(201, 188, 0);
     --secondary-link: rgb(148, 173, 250);
 }
 
@@ -18,20 +19,28 @@ body {
     position: relative;
     margin: 0;
     padding-bottom: 100px;
+    font-family: 'Anuphan', sans-serif;
 }
 
-/* font-family: 'Coda', cursive;
-font-family: 'Comfortaa', cursive;
-font-family: 'Epilogue', sans-serif;
-font-family: 'Gruppo', cursive;
-font-family: 'Oxanium', cursive;
-font-family: 'Quicksand', sans-serif;
-font-family: 'Share', cursive; */
+a {
+    font-family: 'Coda', sans-serif;
+    color: var(--link-dark);
+    text-decoration: none;
+}
+
+p {
+    font-size: .8em;
+}
+
+a:hover {
+    color: var(--secondary-link);
+}
 
 header {
     background-color: var(--primary);
     color: white;
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 header h1 {
@@ -50,7 +59,6 @@ header a {
     text-decoration: none;
     font-size: .8em;
     line-height: 1.4em;
-    font-family: 'Coda', sans-serif;
 }
 
 header a:hover {
@@ -62,28 +70,27 @@ div#site-header {
     padding-right: 55px;
 }
 
-nav {
+nav.navbar,
+nav .container-fluid {
     padding: 0;
 }
 
-nav ul {
-    margin-bottom: 0;
-    display: flex;
-    /* justify-content: end; */
+nav ul.navbar-nav {
+    flex-direction: row;
 }
 
-header button {
+header button.navbar-toggler {
     position: absolute;
-    bottom: 5px;
+    bottom: 3px;
     right: 0;
-    /* padding: .25rem .75rem; */
+    padding: 6px;
     color: rgba (255, 255, 255, .5);
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, .5);
     border-radius: 4px;
 }
 
-header button span {
+header button.navbar-toggler span {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     display: inline-block;
     width: 20px;
@@ -91,6 +98,14 @@ header button span {
     vertical-align: middle;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#about {
+    text-align: right;
+}
+
+#about img {
+    width: 100px;
 }
 
 footer {
@@ -102,11 +117,7 @@ footer {
     background-color: var(--primary);
     color: var(--secondary);
     letter-spacing: .2rem;
-
-    /* font-family: 'Comfortaa', cursive; */
     font-family: 'Gruppo', cursive;
-    /* font-family: 'Quicksand', sans-serif; */
-
     font-size: 1em;
     line-height: 1.2em;
     font-weight: 500;
@@ -116,10 +127,72 @@ main {
     padding: 15px;
 }
 
-main h2 {
+main .accordion-item {
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+main h2, h3 {
     font-family: 'Coda', sans-serif;
-    font-size: 1.3em;
-    font-weight: 800;
+}
+
+main h2 {
+    font-size: 1em;
+    margin: 0;
+}
+
+main h3 {
+    font-size: .9em;
+    font-weight: 300;
+    margin: 8px 0;
+}
+
+main h2 strong,
+main h2 span {
+    color: var(--tertiary);
+    margin-right: 6px;
+    font-family: 'Anuphan', sans-serif;
+    display: inline;
+    font-size: .8em;
+}
+
+main h2 strong {
+    font-weight: bold;
+}
+
+main h2 .accordion-button {
+    margin-top: 6px;
+}
+
+main h2 .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+main .accordion-body {
+    font-family: 'Anuphan', sans-serif;
+    padding: 0;
+    font-size: .8em;
+    margin-top: 12px;
+}
+
+main h2 .accordion-button {
+    display: block;
+    padding: 0 25px 0 0;
+}
+
+main h2 .accordion-button::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+main h2 a.title {
+    color: var(--primary);
+    margin-right: 12px;
+    font-weight: 500;
+    font-size: 1.2em;
 }
 
 
